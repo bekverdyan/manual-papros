@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { Token } from '@angular/compiler';
 
 @Component({
   selector: 'app-login',
@@ -25,15 +26,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-
   login() {
     const val = this.form.value;
 
     if (val.email && val.password) {
       this.authService.login(val.email, val.password)
         .subscribe(
-          () => {
+          (value) => {
             console.log('User is logged in');
+            this.authService.token = value;
             this.router.navigateByUrl('/');
           }
         );
