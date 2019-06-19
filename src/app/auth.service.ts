@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Token } from '@angular/compiler/src/ml_parser/lexer';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Token } from './types/token';
 
 @Injectable({
   providedIn: 'root'
