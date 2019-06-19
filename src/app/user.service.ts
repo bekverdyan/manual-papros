@@ -17,6 +17,6 @@ export class UserService {
    * name
    */
   public listUsers(): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:3000/shfunc');
+    return this.http.get<User[]>('http://localhost:3000/api/users/list');
   }
 }

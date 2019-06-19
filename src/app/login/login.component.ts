@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           (value) => {
             console.log('User is logged in');
             this.authService.token = value;
-            this.router.navigateByUrl('/');
+            this.router.navigateByUrl('/users');
           }
         );
     }
