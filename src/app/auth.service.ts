@@ -8,16 +8,15 @@ import { Token } from './types/token';
 })
 export class AuthService {
 
-  private authToken: Token;
+  private authToken: string;
 
-  public set token(value: Token) {
+  public set token(value: string) {
     this.authToken = value;
   }
 
-  public get token(): Token {
+  public get token(): string {
     return this.authToken;
   }
-
 
   constructor(private http: HttpClient) { }
 
