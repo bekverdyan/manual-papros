@@ -5,10 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthInterceptor } from './auth-interceptor';
-import { LoginComponent } from './login/login.component';
-import { UsersListComponent } from './users-list/users-list.component';
 import { AuthService } from './auth.service';
+import { LoginComponent } from './login/login.component';
 import { UserService } from './user.service';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
